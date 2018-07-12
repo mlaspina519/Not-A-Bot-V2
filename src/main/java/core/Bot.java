@@ -1,5 +1,6 @@
 package core;
 
+import commands.WikiCommand;
 import org.json.simple.JSONObject;
 import com.google.common.util.concurrent.FutureCallback;
 
@@ -10,6 +11,7 @@ import de.btobastian.javacord.listener.message.MessageCreateListener;
 
 import commands.PingPongCommand;
 import commands.RollCommand;
+import commands.StatsCommand;
 
 public class Bot {
 
@@ -35,6 +37,12 @@ public class Bot {
                                 break;
                             case "!roll":
                                 RollCommand.handleMessage(api, message);
+                                break;
+                            case "!stats":
+                                StatsCommand.handleMessage(api, message);
+                                break;
+                            case "!wiki":
+                                WikiCommand.handleMessage(api, message);
                                 break;
                         }
 
