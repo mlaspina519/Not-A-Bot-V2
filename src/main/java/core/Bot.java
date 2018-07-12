@@ -9,6 +9,7 @@ import de.btobastian.javacord.entities.message.Message;
 import de.btobastian.javacord.listener.message.MessageCreateListener;
 
 import commands.PingPongCommand;
+import commands.RollCommand;
 
 public class Bot {
 
@@ -31,6 +32,9 @@ public class Bot {
                         switch (splitMessage[0]) {
                             case "!ping":
                                 PingPongCommand.handleMessage(api, message);
+                                break;
+                            case "!roll":
+                                RollCommand.handleMessage(api, message);
                                 break;
                         }
 
