@@ -42,6 +42,8 @@ public class Bot {
                                 break;
                             case "!prntsc":
                                 RandomPrntscCommand.handleMessage(api, message);
+                                RandomPrntscCommand.handleMessage(api, message);
+                                RandomPrntscCommand.handleMessage(api, message);
                                 break;
                         }
 
